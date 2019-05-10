@@ -597,11 +597,6 @@ const float Coefficients[] = {
 
 
 
-
-
-
-
-
     	//filling xmm's with sepia coefficients of the color b, g, r
         "vmovups (%0), %%xmm1\n\t" 
         "vmovups 0x10(%0), %%xmm2\n\t" 
@@ -629,11 +624,11 @@ const float Coefficients[] = {
         "vaddps %%xmm4, %%xmm0, %%xmm0\n\t"
         "vcvtps2dq %%xmm0, %%xmm0\n\t"
 
-        "movl $0Xff, %%ebx\n\t"
-        "vpbroadcastd %%ebx, %%xmm7\n\t"
+//         "movl $0Xff, %%ebx\n\t"
+//         "vpbroadcastd %%ebx, %%xmm7\n\t"
 
-        "vpcmpgtd %%xmm7, %%xmm0, %%k1\n\t"
-        "vmovdqa32 %%xmm7, %%xmm0%{%%k1%}\n\t"
+//         "vpcmpgtd %%xmm7, %%xmm0, %%k1\n\t"
+//         "vmovdqa32 %%xmm7, %%xmm0%{%%k1%}\n\t"
 
         "vpmovusdb %%xmm0, (%1, %2)\n\t"
         "movb %%al, 0x3(%1, %2)\n\t"
