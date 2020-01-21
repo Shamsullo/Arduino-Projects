@@ -1,3 +1,3 @@
 # Arduino-Projects
 
-This repository was created for to keep materials from my Applied Autonomous Robotics class. 
+This repository was created to keep materials from my Applied Autonomous Robotics class. 
